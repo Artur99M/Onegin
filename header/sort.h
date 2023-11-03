@@ -24,5 +24,13 @@ int mystrcmp(line line1, line line2);
 /// @param line2 second string for compare
 /// @return -1 if less, 0 if equal, 1 if more
 int strcmprev(const line line1, const line line2);
-
+/// @brief helping func for alphabetical sorting
+/// @param data arrive lines that we will sort
+/// @param size number of lines
+/// @param cmp func comparator
+void Qsort (struct line* data, size_t size, int (*cmp)(line, line));
+/// @brief func for swap elems in sort
+/// @param a first elem for swap
+/// @param b second elem for swap
+void swap (line* a, line* b);
 #endif
